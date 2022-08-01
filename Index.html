@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Javascript Quiz</title>
+</head>
+<body>
+        <!-- header displaying leaderboard and time -->
+    <header>
+        <div id="leaderboard">Leaderboard</div>
+        <div>Time: <span id="time">60</span></div>
+    </header>
+    <main>
+        <!-- container with all contents of the application organization -->
+        <section class="container">
+            <!-- Start screen that displays before everything -->
+            <div class="startclass">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+                </p>
+                <div class="start-btn">
+                    <button id="start">Start Quiz!</button>
+                </div>
+            </div>
+            <!-- Questions to be displayed once the quiz starts-->
+            <div class="questionclass">
+                <h1 id="question"></h1>
+                <div class="buttons">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <hr id="linebreak">
+                <div id="right" class="right"></div>
+                <div id="wrong" class="wrong"></div>
+            </div>
+            <!-- end of the quiz which allows the user to enter for the leaderboards -->
+            <div class="endclass">
+                <h1>Finished!</h1>
+                <h2>Your final score is: <span id="final-score"></span></h2>
+                <form id="score-form">
+                    <label for="inits">Enter your initials</label>
+                    <input type="text" id="inits" size="5" maxlength="3" />
+                    <button id="submit">Submit</button>
+                </form>
+            </div>
+             <!-- leaderboards to display the scores in numerical order with the top one being first-->
+            <div class="leaderboard">
+                <h1>View High Scores</h1>
+                <ol id="scores-list"></ol>
+                <div id="leader-btns">
+                    <button id="go-back">Go Back</button>
+                    <button id="clear">Erase Leaderboard</button>
+                    <hr id="linebreak">
+                </div>
+                <div id="erased" class="erased"></div>
+                <div id="error" class="error"></div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/*
+sets the margine and padding to 0 for the whole application
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+default font for main body
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header for time and leaderboard*/
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* allows clickable status of the top left side to be more clear for the user to see*/
+header #leaderboard {
+    text-decoration: underline;
+}
+header #leaderboard:hover {
+    color: rgb(103, 103, 103);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Main container to hold all elements of the application*/
+
+main .container {
+    width: 500px;
+    margin: 0 auto;
+    
+}
+
+/*Media query to properly adjust size of the application based on window*/
+@media screen and (max-width: 767px) {
+ main .container {
+     width: 300px;
+ }
+}
+/*sets the header text to be properly laid out*/
+h1 {
+    font-size: 1.5rem;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/* Starting the quiz with the display on block because its the first thing the user should see */
+
+.startclass {
+    display: block;
+}
+
+/* p, btn, and hover conditional to set positioning and colors */
+.startclass p {
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.start-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.start-btn button {
+    background-color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.start-btn button:hover {
+    background-color: rgb(103, 103, 103);
+    cursor: pointer;
+}
+
+/* Displays questions and the display is subject to change after the start button is pressed */
+
+.questionclass {
+    display: none;
+}
+
+/*btn, and hover conditional to set positioning and colors */
+.questionclass .buttons {
+    margin-bottom: 10px;
+}
+
+.questionclass .buttons button {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.questionclass .buttons button:hover {
+    background-color: rgb(103, 103, 103);
+    cursor: pointer;
+}
+
+/* Flash-messages right, wrong, linebreak and erased */
+
+#right {
+    display: none;
+    transition: 0.3s;
+}
+#wrong {
+    display: none;
+    transition: 0.3s;
+}
+#linebreak {
+    display: none;
+    transition: 0.3s;
+}
+#erased {
+    display: none;
+    transition: 0.3s;
+}
+#error {
+    display: none;
+    transition: 0.3s;
+}
+
+.questionclass .right {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(0, 244, 0);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.questionclass .wrong {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-style: italic;
+}
+.leaderboard .erased {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(0, 244, 0);
+    font-weight: bold;
+    font-style: italic;
+}
+.leaderboard .error {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/*endclass to display when the apporpriate time arises */
+.endclass {
+    display: none;
+}
+
+/*h2, form, input and label, buttons to illustrate positions, conditionals, and way its displayed */
+.endclass h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.endclass form {
+    text-align: center;
+}
+
+.endclass form input {
+    font-size: 1.2rem;
+}
+
+.endclass label {
+    display: block;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.endclass button {
+    background-color: black;
+    font-size: 1.2rem;
+    padding: 2px 5px 2px 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.endclass button:hover {
+    background-color: rgb(103, 103, 103);
+}
+
+
+/*Leaderboard class to list the scores and not display until called */
+
+.leaderboard {
+    display: none;
+}
+
+/*Leaderboard call to set color and standards*/
+.leaderboard ol li {
+    padding: 10px 10px 10px 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*Leaderboard list items to be set to a different color*/
+.leaderboard ol li:nth-child(odd) {
+    background-color:  rgb(103, 103, 103);
+}
+.leaderboard ol li:nth-child(even) {
+    background-color:  rgb(50, 49, 50);
+}
+
+/*Leaderboard buttons to be set to a sertain space and position*/
+.leaderboard div#leader-btns {
+    margin-top: 20px;
+}
+
+/*Leaderboard buttons to be set to a style and position*/
+.leaderboard div#leader-btns button {
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2px 5px 2px 5px;
+    transition: 0.3s;
+}
+/*Leaderboard hover conditional */
+.leaderboard div#leader-btns button:hover {
+    background-color: rgb(103, 103, 103);
+    cursor: pointer;
+}
