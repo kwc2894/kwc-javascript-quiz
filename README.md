@@ -30,8 +30,8 @@ THEN I can save my initials and score
 
 ## Screenshot
 
-![QuizScreen]()
+![QuizScreen](https://github.com/kwc2894/kwc-javascript-quiz/blob/main/assets/Screen%20Shot%202022-08-01%20at%202.22.47%20AM.png)
 
 ## Deployed page
 
-Page published at: 
+Page published at: https://kwc2894.github.io/kwc-javascript-quiz/
