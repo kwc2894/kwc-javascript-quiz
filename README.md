@@ -1,5 +1,3 @@
-# kwc2894.github.io
-
 # Javascript-quiz
 
 ## builds upon an application with the purpose of creating a unique javascript quiz
